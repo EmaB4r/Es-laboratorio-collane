@@ -34,7 +34,7 @@ int combina_pietre_ricorsiva(int pos, int *n_pietre, int *sol, int cnt){
             cnt = combina_pietre_ricorsiva(pos+1, n_pietre, sol, cnt);
             n_pietre[p_zaffiro]++;
         }
-        else if (n_pietre[p_rubino]!=0){
+        if (n_pietre[p_rubino]!=0){
             sol[pos]=p_rubino;
             n_pietre[p_rubino]--;
             cnt = combina_pietre_ricorsiva(pos+1, n_pietre, sol, cnt);
@@ -49,7 +49,7 @@ int combina_pietre_ricorsiva(int pos, int *n_pietre, int *sol, int cnt){
             cnt = combina_pietre_ricorsiva(pos+1, n_pietre, sol, cnt);
             n_pietre[p_smeraldo]++;
         }
-        else if(n_pietre[p_topazio]!=0){
+        if(n_pietre[p_topazio]!=0){
             sol[pos]=p_topazio;
             n_pietre[p_topazio]--;
             cnt = combina_pietre_ricorsiva(pos+1, n_pietre, sol, cnt);
